@@ -1,0 +1,43 @@
+.header {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__top, &__main {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(33,33,33,0.1);
+    }
+    &__top {
+        height: 45px;
+        &-dropdown {
+            margin-right: -15px;
+            .dropdown {
+                &:last-child {
+                    padding-left: 20px;
+                    border-left: 1px solid rgba(33,33,33,0.1);
+                }
+                &__title-text {
+                    line-height: 45px;
+                }
+            }
+
+        }
+    }
+    &__main {
+        height: 100px;
+        .logo {
+            margin-right: 60px;
+        }
+        &-info {
+            display: flex;
+            align-items: center;
+            .find {
+                margin-left: 13px;
+                margin-right: -9px;
+            }
+        }
+    }
+}

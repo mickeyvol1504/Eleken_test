@@ -1,0 +1,11 @@
+// Variable for navigation
+- var navItems = [{text:"Home"}, {text:"Catalogue"}, {text:"News"}, {text:"Sale"}, {text:"About"}, {text:"Contact"}];
+- var navMain = "false";
+
+include ../../components/nav/nav
+
+footer.footer
+    .container
+        include ../../components/logo/logo
+        +nav(navItems, navMain)
+        include ../../components/copyright/copyright

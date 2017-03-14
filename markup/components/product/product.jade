@@ -1,0 +1,13 @@
+mixin product(item)
+    a(class="product" href="#")
+        .product__img
+            img(src= item.img alt="alt text")
+            if item.newProduct
+                span.product__new.upper new
+        h3.product__title=item.title
+        .product__price-wrap
+            if item.oldPrice
+                span.product__price.product__price_old= item.oldPrice
+                span.product__price_new= item.newPrice
+            else
+                span.product__price= item.price

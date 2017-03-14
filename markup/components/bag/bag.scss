@@ -1,0 +1,21 @@
+.bag {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    &.active {
+        .bag__numb {
+            border: 2px solid $blue;
+        }
+    }
+    &__title {
+        opacity: 0.5;
+        margin-right: 16px;
+    }
+    &__numb {
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 44px;
+    }
+}

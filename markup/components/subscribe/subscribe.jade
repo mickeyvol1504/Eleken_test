@@ -1,0 +1,14 @@
+include ../../components/svg/svg
+
+.subscribe
+    .container
+        h3.subscribe__caption.upper subscribe
+        h2.subscribe__title Stay updated on news
+        .subscribe__form-wrap
+            form.subscribe__form
+                .subscribe__email
+                    input(type="text" placeholder="your email address" required)
+                    i.subscribe__arrow
+                        +svg('arrow_right')
+                .subscribe__submit
+                    input(type="submit" value="")

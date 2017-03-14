@@ -1,0 +1,33 @@
+// Variable for list
+- var listItems = ["Delivery", "Faq", "Help"];
+
+// Variable for dropdown
+- var currencyTitle = "Dollars";
+- var currencyItems = ["Uah", "Euro", "Rub"];
+- var languageTitle = "En";
+- var languageItems = ["Ru", "Den", "Ukr"];
+
+// Variable for navigation
+- var navItems = [{text:"Home"}, {text:"Catalog", active: "true"}, {text:"News"}, {text:"Sale"}, {text:"About"}, {text:"Contact"}];
+- var navMain = "true";
+
+include ../../components/list/list
+include ../../components/dropdown/dropdown
+include ../../components/nav/nav
+
+
+
+header.header
+    .header__top
+        .container
+            +list(listItems)
+            .header__top-dropdown
+                +dropdown(currencyTitle, currencyItems)
+                +dropdown(languageTitle, languageItems)
+    .header__main
+        .container
+            include ../../components/logo/logo
+            +nav(navItems, navMain)
+            .header__main-info
+                include ../../components/bag/bag
+                include ../../components/find/find

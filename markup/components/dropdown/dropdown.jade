@@ -1,0 +1,12 @@
+include ../../components/svg/svg
+
+mixin dropdown(title, items)
+    .dropdown
+        .dropdown__title
+            div(class="dropdown__title-text upper js-dropdown-open")= title
+            i.dropdown__arrow
+                +svg('arrow_down')
+        ul.dropdown__list
+            each item in items
+                li.dropdown__item
+                    a(class='dropdown__link upper' href='#')= item

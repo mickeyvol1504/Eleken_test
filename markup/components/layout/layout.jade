@@ -1,0 +1,18 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../../components/head/head
+
+    head
+        +head(head.defaults)
+    body
+
+        include ../../components/svg-sprite/svg-sprite
+
+        include ../../components/header/header
+
+        block content
+
+        include ../../components/footer/footer
+
+        script(src='static/js/main%=hash=%%=min=%.js')

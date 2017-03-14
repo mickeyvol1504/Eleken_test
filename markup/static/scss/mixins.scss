@@ -1,0 +1,54 @@
+// Mixins.
+
+@mixin nl {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    list-style-position: outside;
+}
+// Grid mixins
+@mixin respond-to($media) {
+    @if $media == $mob {
+        @media only screen and (max-width: $mobile-max - 1) {
+            @content;
+        }
+    } @else if $media == $tab {
+        @media only screen and ( min-width: $mobile-max) and (max-width: $tablet-max - 1) {
+            @content;
+        }
+    } @else if $media == $tam {
+        @media only screen and ( max-width: $tablet-max - 1) {
+            @content;
+        }
+    } @else if $media == $tab-p {
+        @media only screen and (min-width: $mobile-max) and (max-width: $tablet-max - 1) and (orientation: portrait) {
+            @content;
+        }
+    }@else if $media == $tab-l {
+        @media only screen and (min-width: $mobile-max) and (max-width: $tablet-max - 1) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $media == $tad {
+        @media only screen and (min-width: $mobile-max)  {
+            @content;
+        }
+    }@else if $media == $desk {
+        @media only screen and (min-width: $tablet-max) {
+            @content;
+        }
+    }@else if $media == $mob-p {
+        @media only screen and (max-width: $mobile-max - 1) and (orientation: portrait)  {
+            @content;
+        }
+    }@else if $media == $mob-l {
+        @media only screen and (max-width: $mobile-max - 1) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $media == $desk-hd {
+        @media only screen and (min-width: $desktop-max) {
+            @content;
+        }
+    }
+
+}

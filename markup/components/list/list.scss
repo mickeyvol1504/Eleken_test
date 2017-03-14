@@ -1,0 +1,25 @@
+.list {
+    display: flex;
+    &__item {
+        margin-right: 35px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        display: block;
+        text-decoration: none;
+        font-size: 11px;
+        line-height: 30px;
+        color: $black;
+        opacity: 0.5;
+    }
+}
+.no-touch {
+    .list {
+        &__link:hover {
+            color: $red;
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+// Common styles of the project
+
+html, body {
+    height: 100%;
+}
+body {
+    font-family: $Lato;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $black;
+    background-color: $white;
+}
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    @include respond-to($tam) {
+        padding: 0 20px;
+    }
+}
+.upper {
+    text-transform: uppercase;
+}
+
+.main-title {
+    font-family: $Playfair;
+    font-size: 58px;
+    letter-spacing: 0;
+}
+

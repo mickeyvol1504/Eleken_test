@@ -1,0 +1,11 @@
+.footer {
+    padding: 32px 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        margin-right: 80px;
+    }
+}

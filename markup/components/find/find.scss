@@ -1,0 +1,12 @@
+.find {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    svg {
+        width: 14px;
+        height: 14px;
+        fill: rgba(33,33,33,0.7);
+    }
+}

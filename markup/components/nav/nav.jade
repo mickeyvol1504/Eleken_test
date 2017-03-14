@@ -1,0 +1,7 @@
+mixin nav(items, main)
+    nav.nav(class=main === "true" ? "nav_main" : "")
+        each item in items
+            if item.active
+                a(class="nav__link upper active" href="#")= item.text
+            else
+                a(class="nav__link upper" href="#")= item.text

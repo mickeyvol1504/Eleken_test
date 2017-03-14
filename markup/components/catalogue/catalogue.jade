@@ -1,0 +1,20 @@
+// Variable for navigation
+- var navItems = [{text:"All", active:"true"}, {text:"T-shirts"}, {text:"Sweaters"}, {text:"Shorts"}, {text:"Jackets"}, {text:"Accessories"}];
+- var navMain = "true";
+
+// Variable for products
+- var productItems = [{img:"static/img/content/product_1.jpg", title:"Printed swimsuit", price:"$23"}, {img:"static/img/content/product_2.jpg", title:"Jogging bermuda shorts", oldPrice:"$36", newPrice:"$12"}, {img:"static/img/content/product_3.jpg", title:"Basic beach flip flops", price:"$9", newProduct:"true"}, {img:"static/img/content/product_4.jpg", title:"Black sunglasses", price:"$29"}, {img:"static/img/content/product_5.jpg", title:"Long sleeved twill shirt", price:"$20"}, {img:"static/img/content/product_6.jpg", title:"Basic swimsuit", price:"$36"}, {img:"static/img/content/product_7.jpg", title:"Bleached shorts", price:"$12"}, {img:"static/img/content/product_8.jpg", title:"T-shirt with lower panel", oldPrice:"$32", newPrice:"$12"}];
+
+include ../../components/nav/nav
+include ../../components/product/product
+
+.catalogue
+    .container
+        h1(class="catalogue__title main-title") Catalog
+        .catalogue__nav
+            +nav(navItems, navMain)
+        .catalogue__list
+            each productItem in productItems
+                +product(productItem)
+        .catalogue__btn-wrap
+            a(class="catalogue__btn upper" href="#") Load more...
